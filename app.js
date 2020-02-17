@@ -4,6 +4,6 @@ const useragent = require('express-useragent');
 
 app.use(useragent.express());
 app.get('/', function(req, res){
-    res.send(req.useragent);
+    res.send(req.useragent.source);
 });
 app.listen(3000, () => console.log('Listening on port 3000!'));
